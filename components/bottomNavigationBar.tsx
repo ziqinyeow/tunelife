@@ -73,7 +73,7 @@ function BottomNavigationBar() {
             type="button"
             className="inline-flex items-center justify-center w-10 h-10 font-medium bg-[#ff0000] rounded-full hover:bg-[#ff3a3a] group focus:ring-4 focus:ring-red-300 focus:outline-none dark:focus:ring-red-800"
           >
-            <Link href="/leaderboard">
+            <Link href="/profile">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
