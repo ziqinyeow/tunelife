@@ -3,6 +3,7 @@ import "./globals.css";
 import { dmSans, mono, satoshi } from "@/lib/fonts";
 import { Providers } from "./providers";
 import Nav from "@/components/nav";
+import BottomNavigationBar from "@/components/bottomNavigationBar";
 
 export const metadata = {
   title: "App",
@@ -22,6 +23,7 @@ export default function RootLayout({
             {/* <Nav /> */}
             {children}
             {/* <Footer /> */}
+            <BottomNavigationBar />
           </div>
           {/* <Background /> */}
         </Providers>
