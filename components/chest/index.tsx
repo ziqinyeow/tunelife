@@ -32,6 +32,7 @@ const ZoomWithOrbital = () => {
       enableZoom={false}
       enablePan={false}
       target={[0, 0, 0]}
+      // autoRotate
       args={[camera, gl.domElement]}
     />
   );

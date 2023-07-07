@@ -16,6 +16,7 @@
     "@mantine/next": "^6.0.16",
     "@react-three/drei": "^9.78.1",
     "@react-three/fiber": "^8.13.4",
+    "@tensorflow/tfjs": "^3.18.0",
     "@tremor/react": "^3.4.1",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",

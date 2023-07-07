@@ -1,5 +1,11 @@
 import localFont from "next/font/local";
-import { DM_Mono, DM_Sans, Inter, Playfair_Display } from "next/font/google";
+import {
+  DM_Mono,
+  DM_Sans,
+  Inter,
+  Playfair_Display,
+  Space_Grotesk,
+} from "next/font/google";
 
 export const satoshi = localFont({
   src: "./Satoshi-Variable.woff2",
@@ -7,6 +13,11 @@ export const satoshi = localFont({
   weight: "300 900",
   display: "swap",
   style: "normal",
+});
+
+export const sgrotesk = Space_Grotesk({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const inter = Inter({

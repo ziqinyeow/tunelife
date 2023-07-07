@@ -2,6 +2,7 @@ import clsx from "clsx";
 import "./globals.css";
 import { dmSans, mono, satoshi } from "@/lib/fonts";
 import { Providers } from "./providers";
+import Nav from "@/components/nav";
 
 export const metadata = {
   title: "App",
