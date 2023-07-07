@@ -1,11 +1,14 @@
 "use client";
 import { Toaster, toast } from "sonner";
+import { MantineProvider } from "@mantine/core";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Toaster />
-      {children}
+      <MantineProvider withGlobalStyles withNormalizeCSS>
+        <Toaster />
+        {children}
+      </MantineProvider>
     </>
   );
 }
