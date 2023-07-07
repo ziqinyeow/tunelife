@@ -78,7 +78,7 @@ function BottomNavigationBar() {
         </div>
         <div className="flex items-center justify-center">
           <Link
-            href="/leaderboard"
+            href="/profile"
             data-tooltip-target="tooltip-new"
             className="inline-flex items-center justify-center w-10 h-10 font-medium bg-[#ff0000] rounded-full hover:bg-[#ff3a3a] group focus:ring-4 focus:ring-red-300 focus:outline-none dark:focus:ring-red-800"
           >
@@ -90,10 +90,7 @@ function BottomNavigationBar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className={clsx([
-                "w-5 h-5 text-white lucide lucide-help-circle",
-                // pathname === "/leaderboard" && "text-red-600",
-              ])}
+              className="lucide lucide-help-circle w-5 h-5 text-white"
             >
               <circle cx="12" cy="12" r="10" />
               <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
