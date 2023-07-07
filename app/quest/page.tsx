@@ -4,6 +4,7 @@ import { mono, satoshi } from "@/lib/fonts";
 import clsx from "clsx";
 import { MoveUpRight, Swords } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const quests = [
@@ -57,6 +58,38 @@ export default function Quest() {
           </p>
         </div>
         <div className="grid grid-rows-1 gap-4 mt-10">
+        <Link href={"/stress"}>
+            <div className="flex items-center w-full gap-5 p-3 text-green-300 border rounded-lg object-cover bg-[url('https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80')]">
+              <Image
+                src={
+                  "https://hospiceatyourside.com/wp-content/uploads/2022/09/mental-health-1.jpg"
+                }
+                width={110}
+                height={110}
+                className="object-cover rounded-lg"
+                alt={
+                  "https://hospiceatyourside.com/wp-content/uploads/2022/09/mental-health-1.jpg"
+                }
+              />
+              <div className="py-2">
+                <h3 className="!font-bold">World Mental Health Day</h3>
+                <h6 className="font-medium text-justify text-white">
+                  Prioritize your mental health this World Mental Health Day –
+                  join us and take our assessment to gain insights, as 1 in 4
+                  people worldwide will experience a mental health disorder in
+                  their lifetime (according to WHO).
+                </h6>
+                <div className="flex items-center gap-1 mt-1">
+                  <p className="flex items-center gap-2 text-xs font-medium text-green-500">
+                    <MoveUpRight className="w-3 h-3" /> 30
+                  </p>
+                  <div className="w-6 h-6">
+                    <Coin />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
           {quests?.map((r, i) => (
             <div
               key={i}
