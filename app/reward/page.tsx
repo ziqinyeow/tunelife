@@ -177,7 +177,7 @@ const rewards = [
   },
 ];
 
-export default function page() {
+export default function Page() {
   const [tab, setTab] = useState(tabs[1]);
 
   return (

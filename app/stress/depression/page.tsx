@@ -102,7 +102,8 @@ const Home = () => {
                   </span>
                 </button>
                 <h5 className="text-xs text-gray-600">
-                  * By continuing, you're agreeing to the terms and conditions.
+                  * By continuing, you&apos;re agreeing to the terms and
+                  conditions.
                 </h5>
               </div>
             </div>
@@ -237,7 +238,7 @@ const Home = () => {
                 </div>
                 <h5 className="text-xs text-gray-600">
                   {counter === 0
-                    ? "* By continuing, you're agreeing to the terms and conditions."
+                    ? "* By continuing, you&apos;re agreeing to the terms and conditions."
                     : "* Please choose 1 selection."}
                 </h5>
               </div>

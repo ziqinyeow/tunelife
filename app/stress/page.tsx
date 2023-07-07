@@ -48,7 +48,8 @@ const Home = () => {
                 </div>
               </Link>
               <h5 className="text-xs text-gray-600">
-                * By continuing, you're agreeing to the terms and conditions.
+                * By continuing, you&apos;re agreeing to the terms and
+                conditions.
               </h5>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Watch from "@/components/3d/watch";
 import Shoe from "@/components/3d/shoe";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 function ListItem({
   name,
@@ -21,8 +22,15 @@ function ListItem({
         </div>
         <div className="flex items-center justify-between w-[100%] m-2 p-4 border border-[#ff0000] rounded-2xl font-bold">
           <div className="flex items-center">
-            <img
+            {/* <img
               className="w-10 h-10 mr-4 rounded-full"
+              src={`/images/${index + 1}.jpg`}
+              alt="Rounded avatar"
+            /> */}
+            <Image
+              className="object-cover !w-10 !h-10 mr-4 rounded-full"
+              width={30}
+              height={30}
               src={`/images/${index + 1}.jpg`}
               alt="Rounded avatar"
             />
@@ -40,8 +48,15 @@ function ListItem({
       </div>
       <div className="flex items-center justify-between w-[100%] m-2 p-4 border rounded-2xl border-gray-100">
         <div className="flex items-center">
-          <img
+          {/* <img
             className="object-cover w-10 h-10 mr-4 rounded-full"
+            src={`/images/${index + 1}.jpg`}
+            alt="Rounded avatar"
+          /> */}
+          <Image
+            className="object-cover !w-10 !h-10 mr-4 rounded-full"
+            width={30}
+            height={30}
             src={`/images/${index + 1}.jpg`}
             alt="Rounded avatar"
           />
@@ -105,7 +120,7 @@ function page() {
             <Macbook />
             <div className="flex flex-col items-center text-xs font-medium">
               <div className="text-base text-red-500">1st</div>
-              <div>Macbook Pro 14'</div>
+              <div>Macbook Pro 14&apos;</div>
             </div>
           </div>
           <div className="flex flex-col items-center w-full h-36">

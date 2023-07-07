@@ -16,6 +16,33 @@ const quests = [
       "Enjoy the joyness of jogging and maintain a healthy lifestyle.",
     coins: 20,
   },
+  {
+    id: 2,
+    category: "Health",
+    img: "https://plus.unsplash.com/premium_photo-1665203429251-856b32d99a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    title: "30 Mins Cycling",
+    description:
+      "Enjoy the joyness of jogging and maintain a healthy lifestyle.",
+    coins: 20,
+  },
+  {
+    id: 3,
+    category: "Health",
+    img: "https://plus.unsplash.com/premium_photo-1665203429251-856b32d99a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    title: "30 Mins Meditation",
+    description:
+      "Enjoy the joyness of jogging and maintain a healthy lifestyle.",
+    coins: 20,
+  },
+  {
+    id: 4,
+    category: "Health",
+    img: "https://plus.unsplash.com/premium_photo-1665203429251-856b32d99a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    title: "Depression Test",
+    description:
+      "Enjoy the joyness of jogging and maintain a healthy lifestyle.",
+    coins: 20,
+  },
 ];
 
 export default function Quest() {

@@ -3,6 +3,7 @@ import jsonData from "@/mock/feeds.json";
 import Link from "next/link";
 import Feed from "@/model/feed";
 import BackButton from "@/components/backButton";
+import Image from "next/image";
 
 function ListItem({ feed }: { feed: Feed }) {
   function formatTimeWithAMPM(dateStr: string) {
@@ -19,8 +20,15 @@ function ListItem({ feed }: { feed: Feed }) {
   return (
     <Link href={`/feed/${feed.id}`}>
       <div className="flex items-center justify-between w-[100%] mb-2 p-4 border rounded-2xl border-gray-100">
-        <img
+        {/* <img
           className="object-cover w-10 h-10 mr-4 rounded-full"
+          src={feed.img}
+          alt="Rounded avatar"
+        /> */}
+        <Image
+          className="object-cover w-10 h-10 mr-4 rounded-full"
+          width={30}
+          height={30}
           src={feed.img}
           alt="Rounded avatar"
         />

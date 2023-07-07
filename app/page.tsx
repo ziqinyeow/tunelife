@@ -1,5 +1,4 @@
 import Coin from "@/components/3d/coin";
-import Chest from "@/components/chest";
 import Logo from "@/components/logo";
 import Image from "next/image";
 import Link from "next/link";

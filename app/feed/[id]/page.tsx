@@ -2,6 +2,7 @@ import React from "react";
 import jsonData from "@/mock/feeds.json";
 import Feed from "@/model/feed";
 import BackButton from "@/components/backButton";
+import Image from "next/image";
 
 function page({ params }: { params: { id: string } }) {
   const rawFeed: any = jsonData.find((item) => item.id == params.id);
@@ -26,8 +27,15 @@ function page({ params }: { params: { id: string } }) {
         <BackButton />
       </div>
       <div className="flex items-center px-6 mb-2">
-        <img
+        {/* <img
           className="w-10 h-10 mr-4 rounded-full"
+          src={feed.profileImg}
+          alt="Rounded avatar"
+        /> */}
+        <Image
+          width={30}
+          height={30}
+          className="!w-10 !h-10 mr-4 rounded-full"
           src={feed.profileImg}
           alt="Rounded avatar"
         />
