@@ -139,3 +139,23 @@
 .custom_scrollbar::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.no_scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+.no_scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.no_scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.no_scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
