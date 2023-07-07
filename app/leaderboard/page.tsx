@@ -1,3 +1,6 @@
+import Macbook from "@/components/3d/macbook";
+import Watch from "@/components/3d/watch";
+import Shoe from "@/components/3d/shoe";
 import Link from "next/link";
 import React from "react";
 
@@ -88,6 +91,31 @@ function page() {
             </svg>
           </button>
         </Link>
+      </div>
+      <div className="flex-col layout mb-14 !items-start">
+        <div className="grid grid-cols-3 gap-4">
+          <div className="flex flex-col items-center w-full h-36">
+            <Watch />
+            <div className="flex flex-col items-center text-xs font-medium">
+              <div className="text-base text-red-500">2nd</div>
+              <div>Apple Watch Ultra</div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center w-full h-36">
+            <Macbook />
+            <div className="flex flex-col items-center text-xs font-medium">
+              <div className="text-base text-red-500">1st</div>
+              <div>Macbook Pro 14'</div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center w-full h-36">
+            <Shoe />
+            <div className="flex flex-col items-center text-xs font-medium">
+              <div className="text-base text-red-500">3rd</div>
+              <div>Nike Air Jordan</div>
+            </div>
+          </div>
+        </div>
       </div>
       {nameList.map((name, index) => {
         return (
