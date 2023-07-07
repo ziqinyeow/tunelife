@@ -2,7 +2,14 @@
 import { StatsRingCard } from "@/components/statsRingCard";
 import StatsRingCardProps from "@/model/statsRingCardProps";
 import React, { useState } from "react";
-import { SegmentedControl, Group, Center, Box } from "@mantine/core";
+import {
+  SegmentedControl,
+  Group,
+  Center,
+  Box,
+  Modal,
+  Drawer,
+} from "@mantine/core";
 import {
   IconLock,
   IconMotorbike,
@@ -12,6 +19,7 @@ import {
   IconCar,
   IconActivity,
 } from "@tabler/icons-react";
+import { useDisclosure } from "@mantine/hooks";
 
 function SegmentedToggle({
   tab,
@@ -107,7 +115,7 @@ function Profile() {
             Medical Card
           </h5>
           <p className="font-normal text-gray-700 my-tune:text-gray-400">
-            Unilah
+            DC Logistics Sdn Bhd.
           </p>
           <p className="font-normal text-gray-700 my-tune:text-gray-400">
             Name: Ali Imran
@@ -139,6 +147,14 @@ function Profile() {
 }
 
 function MyTune() {
+  const [opened, { open, close }] = useDisclosure(false);
+  const [clickedInsurance, setClickedInsurance] = useState<string>("");
+
+  const handleClick = () => {
+    setClickedInsurance("Health Screening");
+    open();
+  };
+
   return (
     <>
       <div className="m-4 mb-6 flex ">
@@ -149,7 +165,7 @@ function MyTune() {
         />
         <div>
           <p className="font-normal text-gray-700 my-tune:text-gray-400">
-            Unilah
+            DC Logistics Sdn Bhd.
           </p>
           <p className="font-normal text-gray-700 my-tune:text-gray-400">
             Name: Ali Imran
@@ -165,7 +181,10 @@ function MyTune() {
         </h3>
         <div className="grid grid-cols-3 gap-3">
           <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2">
+            <button
+              className="p-2 border rounded-2xl mb-2"
+              onClick={() => handleClick()}
+            >
               <IconStethoscope className="w-10 h-10 text-red-500" />
             </button>
             <p className="ml-2 text-center">PRO-Health Medical</p>
@@ -238,6 +257,17 @@ function MyTune() {
           </div> */}
         </div>
       </div>
+      <div className="flex w-96 p-3 border mb-2">
+        <IconMotorbike className="m-3 w-10 h-10 text-red-500" />
+        <div>
+          <p>Home Easy</p>
+          <p>10x Tune Coin earn rate</p>
+        </div>
+      </div>
+      <p>
+        When you have higher earn rate, you can earn more coins after completing
+        a quest. If a quest rewards user with 1 coin, you can earn 10 coins!
+      </p>
     </>
   );
 }
