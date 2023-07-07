@@ -20,9 +20,10 @@ export default function RootLayout({
       <body className={clsx([mono.className, "flex"])}>
         <Providers>
           <div className="z-10 w-full">
-            {/* <Nav /> */}
+            <Nav />
             {children}
             {/* <Footer /> */}
+            <div className="py-10"></div>
             <BottomNavigationBar />
           </div>
           {/* <Background /> */}

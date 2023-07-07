@@ -12,14 +12,14 @@ function ListItem({
 }) {
   if (index == 1) {
     return (
-      <div className="flex justify-center items-center m-2">
+      <div className="flex items-center justify-center max-w-lg m-2 mx-auto">
         <div className="p-4 text-3xl text-[#ff0000] font-bold">
           <span>{index + 1}</span>
         </div>
         <div className="flex items-center justify-between w-[100%] m-2 p-4 border border-[#ff0000] rounded-2xl font-bold">
           <div className="flex items-center">
             <img
-              className="w-10 h-10 rounded-full mr-4"
+              className="w-10 h-10 mr-4 rounded-full"
               src={`/images/${index + 1}.jpg`}
               alt="Rounded avatar"
             />
@@ -31,20 +31,20 @@ function ListItem({
     );
   }
   return (
-    <div className="flex justify-center items-center m-2">
-      <div className="p-4 text-3xl text-blue-500 font-bold">
+    <div className="flex items-center justify-center max-w-lg m-2 mx-auto">
+      <div className="p-4 text-3xl font-bold text-blue-500">
         <span>{index + 1}</span>
       </div>
       <div className="flex items-center justify-between w-[100%] m-2 p-4 border rounded-2xl border-gray-100">
         <div className="flex items-center">
           <img
-            className="object-cover w-10 h-10 rounded-full mr-4"
+            className="object-cover w-10 h-10 mr-4 rounded-full"
             src={`/images/${index + 1}.jpg`}
             alt="Rounded avatar"
           />
           <span className="">{name}</span>
         </div>
-        <span className="text-yellow-600 font-semibold text-xl">{point}</span>
+        <span className="text-xl font-semibold text-yellow-600">{point}</span>
       </div>
     </div>
   );
@@ -60,7 +60,11 @@ function page() {
   ];
   return (
     <div>
-      <div className="flex justify-end p-4">
+      <div className="flex items-center justify-between max-w-lg p-2 mx-auto mt-5 mb-4">
+        <p className="text-xl font-bold">
+          <span className="text-[#ff0000]">Leaderb</span>
+          <span>oard</span>
+        </p>
         <Link href="/feed">
           <button
             type="button"

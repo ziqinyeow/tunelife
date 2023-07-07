@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Logo({ className }: any) {
   return (
-    <Link href={`/`} className="flex items-center gap-4 py-5">
+    <Link href={`/`} className="flex items-center gap-4 py-2">
       <Image
         src="/logo.png"
         alt="logo"

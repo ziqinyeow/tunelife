@@ -11,7 +11,7 @@ const Nav: FC<NavProps> = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="justify-between mb-10 layout">
+    <nav className="justify-between layout">
       <Logo />
       {/* <div className="flex items-center gap-2">
         <Button
