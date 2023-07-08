@@ -2,30 +2,31 @@
 
 import { FC } from "react";
 import Logo from "./logo";
-import { usePathname, useRouter } from "next/navigation";
+import Coin from "./3d/coin";
+import clsx from "clsx";
+import { mono } from "@/lib/fonts";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface NavProps {}
 
 const Nav: FC<NavProps> = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const pathname = usePathname();
 
   return (
     <nav className="justify-between layout">
       <Logo />
-      {/* <div className="flex items-center gap-2">
-        <Button
-          className={clsx([pathname === "/data" && "!text-black !bg-gray-100"])}
-          onClick={() => {
-            router.push("/data");
-          }}
-        >
-          <BrainCircuit className="w-4 h-4 text-inherit" />
-          <span className={clsx(["hidden md:block", mono.className])}>
-            Data
-          </span>
-        </Button>
-      </div> */}
+      {pathname !== "a" && (
+        <Link href="/reward" className="flex items-center gap-2">
+          <div className="w-8 h-8">
+            <Coin />
+          </div>
+          <div className={clsx([mono.className], "font-bold text-[#ff0000]")}>
+            20
+          </div>
+        </Link>
+      )}
     </nav>
   );
 };

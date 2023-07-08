@@ -20,28 +20,28 @@ const quests = [
   {
     id: 2,
     category: "Health",
-    img: "https://plus.unsplash.com/premium_photo-1665203429251-856b32d99a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    img: "https://plus.unsplash.com/premium_photo-1683842178579-2365ce4f5352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     title: "30 Mins Cycling",
     description:
-      "Enjoy the joyness of jogging and maintain a healthy lifestyle.",
+      "Enjoy the joyness of cycling and maintain a healthy lifestyle.",
     coins: 20,
   },
   {
     id: 3,
     category: "Health",
-    img: "https://plus.unsplash.com/premium_photo-1665203429251-856b32d99a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    img: "https://images.unsplash.com/photo-1577253313708-cab167d2c474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80",
     title: "30 Mins Meditation",
     description:
-      "Enjoy the joyness of jogging and maintain a healthy lifestyle.",
-    coins: 20,
+      "Enjoy the joyness of peacefulness and maintain a healthy lifestyle.",
+    coins: 40,
   },
   {
     id: 4,
     category: "Health",
-    img: "https://plus.unsplash.com/premium_photo-1665203429251-856b32d99a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+    img: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     title: "Depression Test",
     description:
-      "Enjoy the joyness of jogging and maintain a healthy lifestyle.",
+      "Take a test to identify how severe your depression level is and our AI model will analyze the depression rate and provide advices.",
     coins: 20,
   },
 ];
@@ -58,14 +58,14 @@ export default function Quest() {
           </p>
         </div>
         <div className="grid grid-rows-1 gap-4 mt-10">
-        <Link href={"/stress"}>
+          <Link href={"/stress"}>
             <div className="flex items-center w-full gap-5 p-3 text-green-300 border rounded-lg object-cover bg-[url('https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80')]">
               <Image
                 src={
                   "https://hospiceatyourside.com/wp-content/uploads/2022/09/mental-health-1.jpg"
                 }
-                width={110}
-                height={110}
+                width={120}
+                height={120}
                 className="object-cover rounded-lg"
                 alt={
                   "https://hospiceatyourside.com/wp-content/uploads/2022/09/mental-health-1.jpg"
@@ -73,7 +73,7 @@ export default function Quest() {
               />
               <div className="py-2">
                 <h3 className="!font-bold">World Mental Health Day</h3>
-                <h6 className="font-medium text-justify text-white">
+                <h6 className="font-medium text-justify text-white line-clamp-2">
                   Prioritize your mental health this World Mental Health Day –
                   join us and take our assessment to gain insights, as 1 in 4
                   people worldwide will experience a mental health disorder in

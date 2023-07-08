@@ -6,8 +6,9 @@ import Nav from "@/components/nav";
 import BottomNavigationBar from "@/components/bottomNavigationBar";
 
 export const metadata = {
-  title: "App",
-  description: "...",
+  title: "Tune Life",
+  description:
+    "A customer loyalty program that improves the engagement of the insurers",
 };
 
 export default function RootLayout({
