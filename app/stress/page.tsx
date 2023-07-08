@@ -18,9 +18,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col items-start max-w-lg px-4 py-8 mx-auto">
       <main className={clsx("py-10")}>
-        <div className="flex flex-col items-start max-w-3xl md:max-w-5xl px-4 py-8 mx-auto 2xl:max-w-7xl 3xl:max-w-[90rem]">
+        <div className="">
           <div className="flex items-center justify-center w-full">
             <div className="text-justify">
               <h2 className="mb-6">Tune Test</h2>
