@@ -50,7 +50,7 @@ export default function Model({ open, setOpen, ...props }: Props) {
   });
 
   return (
-    <group onClick={handleAnimation} ref={group} {...props} dispose={null}>
+    <group onClick={handleAnimation} {...props} dispose={null}>
       <group name="Scene">
         <group
           name="Light"
