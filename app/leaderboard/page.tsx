@@ -14,7 +14,7 @@ function ListItem({
   point: number;
   index: number;
 }) {
-  if (index == 1) {
+  if (index === 1) {
     return (
       <div className="flex items-center justify-center max-w-lg m-2 mx-auto">
         <div className="p-4 text-3xl text-[#ff0000] font-bold">
@@ -31,7 +31,7 @@ function ListItem({
               className="object-cover !w-10 !h-10 mr-4 rounded-full"
               width={30}
               height={30}
-              src={`/images/${index + 1}.jpg`}
+              src={`/images/2.jpg`}
               alt="Rounded avatar"
             />
             <span className="">{name}</span>
@@ -57,7 +57,7 @@ function ListItem({
             className="object-cover !w-10 !h-10 mr-4 rounded-full"
             width={30}
             height={30}
-            src={`/images/${index + 1}.jpg`}
+            src={`/images/${(index %4)+1}.jpg`}
             alt="Rounded avatar"
           />
           <span className="">{name}</span>
@@ -71,10 +71,50 @@ function ListItem({
 function page() {
   const nameList = [
     "Farhana",
-    "Fatimah",
-    // "Tan Boon",
+    "Ali Imran",
     "Elvis Lim Yi Han",
     "Low Wei King",
+    "Tan Boon",
+    "Ali",
+    "Aishah",
+    "Azman",
+    "Nurul Iman",
+    "Kamal",
+    "Norliana",
+    "Hafiz",
+    "Norhayati",
+    "Mohamad",
+    "Nurul Afiqah",
+    "Hasan",
+    "Zainab",
+    "Firdaus",
+    "Salmah",
+    "Hamid",
+    "Rozana",
+    "Hakim",
+    "Aina",
+    "Rizwan",
+    "Nadia",
+    "Harith",
+    "Norain",
+    "Farhan",
+    "Mira",
+    "Rahman",
+    "Liyana",
+    "Rizal",
+    "Zara",
+    "Razak",
+    "Nurul",
+    "Razali",
+    "Siti Aisyah",
+    "Aziz",
+    "Nurul Amira",
+    "Ibrahim",
+    "Nurul Azmi",
+    "Wan",
+    "Nurul Fazliana",
+    "Syed",
+    "Nurul Hafiza",
   ];
   return (
     <div>
