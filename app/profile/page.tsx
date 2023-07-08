@@ -46,20 +46,20 @@ function SegmentedToggle({
         onChange={(value: "profile" | "my-tune") => setTab(value)}
         data={[
           {
-            value: "profile",
-            label: (
-              <Center>
-                {/* <IconSun size="1rem" stroke={1.5} /> */}
-                <Box ml={10}>Profile</Box>
-              </Center>
-            ),
-          },
-          {
             value: "my-tune",
             label: (
               <Center>
                 {/* <IconMoon size="1rem" stroke={1.5} /> */}
                 <Box ml={10}>My Tune</Box>
+              </Center>
+            ),
+          },
+          {
+            value: "profile",
+            label: (
+              <Center>
+                {/* <IconSun size="1rem" stroke={1.5} /> */}
+                <Box ml={10}>Profile</Box>
               </Center>
             ),
           },
@@ -69,7 +69,7 @@ function SegmentedToggle({
   );
 }
 
-function Profile() {
+function MyTune() {
   const stats: StatsRingCardProps[] = [
     {
       title: "Health Screening",
@@ -156,26 +156,25 @@ function Profile() {
   );
 }
 
-function MyTune() {
+function Profile() {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     setHydrated(true);
   });
   // const [opened, { open, close }] = useDisclosure(false);
-  // const [clickedInsurance, setClickedInsurance] = useState<string>("");
+  const [clickedInsurance, setClickedInsurance] = useState<string>("");
 
-  // const handleClick = () => {
-  //   setClickedInsurance("Health Screening");
-  //   open();
-  // };
+  const handleClick = (title: string) => {
+    setClickedInsurance(title);
+  };
 
   return (
     <>
       <div className="flex m-4 mb-6">
         <img
           className="object-cover w-20 h-20 mr-6 rounded-full"
-          src="./images/1.jpg"
+          src="./images/2.jpg"
           alt="Rounded avatar"
         />
         <div>
@@ -205,7 +204,10 @@ function MyTune() {
                       "flex flex-col items-center"
                     )}
                   >
-                    <button className="p-2 mb-2 border rounded-2xl">
+                    <button
+                      className="p-2 mb-2 border rounded-2xl shadow-red-300 shadow-md"
+                      onClick={() => handleClick("PRO-Health Medical")}
+                    >
                       <IconStethoscope className="w-10 h-10 text-red-500" />
                     </button>
                     <p className="ml-2 text-center">PRO-Health Medical</p>
@@ -213,9 +215,91 @@ function MyTune() {
                 </DialogTrigger>
                 <DialogContent>
                   <div className="flex w-full p-3 mb-2 border">
-                    <IconMotorbike className="w-10 h-10 m-3 text-red-500" />
+                    <IconStethoscope className="w-10 h-10 m-3 text-red-500" />
+                    <p>{clickedInsurance}</p>
+                  </div>
+                  <p className="font-bold">What Is This Product About?</p>
+                  <p>
+                    This is a yearly renewable plan which provides reimbursement
+                    for hospitalisation and surgical expenses incurred during an
+                    admission at a hospital. This is a pure protection product
+                    and it does not provide any savings or investment elements.
+                  </p>
+                  <p className="font-bold">
+                    Who Can Be Covered Under This Plan?
+                  </p>
+                  <p>
+                    Companies that are legal entities registered in Malaysia
+                    with a minimum number of 5 up to a maximum of 250 full time
+                    permanent employees. Part time and contract employees are
+                    not eligible. Participation of your employees is on a
+                    compulsory basis and coverage can be extended to their
+                    dependants. If you choose to extend coverage to dependants,
+                    participation will be on a compulsory basis.
+                  </p>
+                  <button className="w-auto border p-3 bg-[#ff0000] rounded-xl text-white">
+                    See More
+                  </button>
+                </DialogContent>
+              </Dialog>
+              <Dialog>
+                <DialogTrigger>
+                  <div className="flex flex-col items-center">
+                    <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
+                      <IconLock className="w-10 h-10 text-gray-600" />
+                    </button>
+                    <p className="ml-2 text-center">Bike Easy</p>
+                  </div>
+                </DialogTrigger>
+                <DialogTrigger>
+                  <div className="flex flex-col items-center">
+                    <button
+                      className="p-2 mb-2 border rounded-2xl bg-slate-200"
+                      onClick={() => handleClick("Critical Safe+")}
+                    >
+                      <IconLock className="w-10 h-10 text-gray-600" />
+                    </button>
+                    <p className="ml-2 text-center">Critical Safe+</p>
+                  </div>
+                </DialogTrigger>
+                <DialogTrigger>
+                  <div className="flex flex-col items-center">
+                    <button
+                      className="p-2 mb-2 border rounded-2xl bg-slate-200"
+                      onClick={() => handleClick("Home Easy")}
+                    >
+                      <IconLock className="w-10 h-10 text-gray-600" />
+                    </button>
+                    <p className="ml-2 text-center">Home Easy</p>
+                  </div>
+                </DialogTrigger>
+                <DialogTrigger>
+                  <div className="flex flex-col items-center">
+                    <button
+                      className="p-2 mb-2 border rounded-2xl bg-slate-200"
+                      onClick={() => handleClick("COVID Travel Pass+")}
+                    >
+                      <IconLock className="w-10 h-10 text-gray-600" />
+                    </button>
+                    <p className="ml-2 text-center">COVID Travel Pass+</p>
+                  </div>
+                </DialogTrigger>
+                <DialogTrigger>
+                  <div className="flex flex-col items-center">
+                    <button
+                      className="p-2 mb-2 border rounded-2xl bg-slate-200"
+                      onClick={() => handleClick("Motor")}
+                    >
+                      <IconLock className="w-10 h-10 text-gray-600" />
+                    </button>
+                    <p className="ml-2 text-center">Motor</p>
+                  </div>
+                </DialogTrigger>
+                <DialogContent>
+                  <div className="flex w-full p-3 mb-2 border">
+                    <IconLock className="w-10 h-10 m-3 text-red-500" />
                     <div>
-                      <p>Home Easy</p>
+                      <p>{clickedInsurance}</p>
                       <p>10x Tune Coin earn rate</p>
                     </div>
                   </div>
@@ -224,45 +308,11 @@ function MyTune() {
                     after completing a quest. If a quest rewards user with 1
                     coin, you can earn 10 coins!
                   </p>
+                  <button className="w-auto border p-3 bg-[#ff0000] rounded-xl text-white">
+                    I want this!
+                  </button>
                 </DialogContent>
               </Dialog>
-
-              <div className="flex flex-col items-center">
-                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
-                  <IconLock className="w-10 h-10 text-gray-600" />
-                </button>
-                <p className="ml-2 text-center">Bike Easy</p>
-              </div>
-              {/* <div className="flex flex-col items-center">
-            <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
-              <IconMotorbike className="w-10 h-10 text-gray-600" />
-            </button>
-            <p className="ml-2 text-center">Bike Easy</p>
-          </div> */}
-              <div className="flex flex-col items-center">
-                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
-                  <IconLock className="w-10 h-10 text-gray-600" />
-                </button>
-                <p className="ml-2 text-center">Critical Safe+</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
-                  <IconLock className="w-10 h-10 text-gray-600" />
-                </button>
-                <p className="ml-2 text-center">Home Easy</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
-                  <IconLock className="w-10 h-10 text-gray-600" />
-                </button>
-                <p className="ml-2 text-center">COVID Travel Pass+</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
-                  <IconLock className="w-10 h-10 text-gray-600" />
-                </button>
-                <p className="ml-2 text-center">Motor</p>
-              </div>
             </>
           )}
           {/* <div className="flex flex-col items-center">
@@ -297,17 +347,6 @@ function MyTune() {
           </div> */}
         </div>
       </div>
-      <div className="flex p-3 mb-2 border w-96">
-        <IconMotorbike className="w-10 h-10 m-3 text-red-500" />
-        <div>
-          <p>Home Easy</p>
-          <p>10x Tune Coin earn rate</p>
-        </div>
-      </div>
-      <p>
-        When you have higher earn rate, you can earn more coins after completing
-        a quest. If a quest rewards user with 1 coin, you can earn 10 coins!
-      </p>
     </>
   );
 }
