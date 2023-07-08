@@ -20,18 +20,18 @@ function ListItem({ feed }: { feed: Feed }) {
   return (
     <Link href={`/feed/${feed.id}`}>
       <div className="flex items-center justify-between w-[100%] mb-2 p-4 border rounded-2xl border-gray-100">
-        {/* <img
+        <img
           className="object-cover w-10 h-10 mr-4 rounded-full"
           src={feed.img}
           alt="Rounded avatar"
-        /> */}
-        <Image
+        />
+        {/* <Image
           className="object-cover w-10 h-10 mr-4 rounded-full"
           width={30}
           height={30}
           src={feed.img}
           alt="Rounded avatar"
-        />
+        /> */}
         <div className="w-[100%]">
           <p className="">{feed.title}</p>
           <div className="flex items-center justify-between">

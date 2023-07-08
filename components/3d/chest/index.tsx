@@ -34,7 +34,7 @@ const ZoomWithOrbital = () => {
   );
 };
 
-const Chest = () => {
+const Chest = ({ className }: { className?: string }) => {
   // State if chest is open
   const [open, setOpen] = useState(false);
   return (
@@ -42,6 +42,7 @@ const Chest = () => {
       <Canvas
         // colorManagement
         // shadowMap
+        className={className}
         camera={{ position: [-5, 4, 4], fov: 40 }}
       >
         <Suspense fallback={null}>

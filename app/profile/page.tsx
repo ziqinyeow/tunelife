@@ -161,7 +161,7 @@ function Profile() {
 
   useEffect(() => {
     setHydrated(true);
-  });
+  }, []);
   // const [opened, { open, close }] = useDisclosure(false);
   const [clickedInsurance, setClickedInsurance] = useState<string>("");
 
@@ -205,7 +205,7 @@ function Profile() {
                     )}
                   >
                     <button
-                      className="p-2 mb-2 border rounded-2xl shadow-red-300 shadow-md"
+                      className="p-2 mb-2 border shadow-md rounded-2xl shadow-red-300"
                       onClick={() => handleClick("PRO-Health Medical")}
                     >
                       <IconStethoscope className="w-10 h-10 text-red-500" />

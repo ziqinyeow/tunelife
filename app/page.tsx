@@ -5,6 +5,15 @@ import Logo from "@/components/logo";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Gift } from "lucide-react";
 
 export default function Home() {
   const [progress, setProgress] = useState("70%");
@@ -34,9 +43,53 @@ export default function Home() {
               <span className="p-1 font-bold text-white">{progress}</span>
             </div>
           </div>
-          <div className="absolute w-16 h-16 bg-white border rounded-full -top-1 -right-2 border-primary-red">
-            <Chest />
-          </div>
+
+          <Dialog>
+            <DialogTrigger>
+              <div className="absolute w-16 h-16 bg-white border rounded-full cursor-pointer -top-1 -right-2 border-primary-red">
+                <Chest />
+              </div>
+            </DialogTrigger>
+            <DialogContent>
+              <div className="">
+                <div className="w-full h-36">
+                  <Chest />
+                </div>
+                <div>
+                  <div className="flex gap-3 mb-4 items-center text-[#ff0000]">
+                    <Gift className="w-5 h-5" />
+                    <h4 className="font-bold">Potential Rewards</h4>
+                  </div>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="flex flex-col items-center h-24 text-center border rounded-lg">
+                      <Coin />
+                      <div>25 coins</div>
+                    </div>
+                    <div className="flex flex-col items-center h-24 text-center border rounded-lg">
+                      <Coin />
+                      <div>50 coins</div>
+                    </div>
+                    <div className="flex flex-col items-center h-24 text-center border rounded-lg">
+                      <Coin />
+                      <div>99 coins</div>
+                    </div>
+                    <div className="flex flex-col items-center h-24 text-center border rounded-lg">
+                      <Chest />
+                      <div>2x coins</div>
+                    </div>
+                    <div className="flex flex-col items-center h-24 text-center border rounded-lg">
+                      <Chest />
+                      <div>5x coins</div>
+                    </div>
+                    <div className="flex flex-col items-center h-24 text-center border rounded-lg">
+                      <Chest />
+                      <div>10x coins</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </main>
