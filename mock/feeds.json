@@ -1,44 +1,44 @@
 [
-    {
-        "id": "1",
-        "name": "Elvis Lim Yi Han",
-        "point": 100,
-        "profileImg": "/images/3.jpg",
-        "img": "/images/cycling.png",
-        "title": "A Breathtaking Cycling Adventure",
-        "description": "Today, I embarked on an exhilarating cycling expedition that took me on a mesmerizing journey through nature's wonders. As the sun painted the sky with hues of gold, I hopped on my trusty bicycle, ready to embrace the beauty that awaited me.",
-        "datetime": "2021-10-10 10:10:10",
-        "like": 2,
-        "comment": 10,
-        "share": 15,
-        "isLike": true
-    },
-    {
-        "id": "2",
-        "name": "Low Wei King",
-        "point": 100,
-        "profileImg": "/images/4.jpg",
-        "img": "/images/dog.png",
-        "title": "Unleashing happiness with my furry companion!",
-        "description": "In this heartwarming snapshot, my loyal four-legged friend and I are basking in the glorious sunshine, embracing the simple joys of life. Our day has been filled with endless playfulness, wagging tails, and slobbery kisses. Together, we've explored nature's wonders, taking long walks in the park, chasing squirrels, and rolling in the grass without a care in the world. The bond we share is unbreakable, a friendship that fills my heart with love and laughter. From morning cuddles to evening adventures, every moment spent with my furry companion is a treasure I hold dear. Cherish the moments with your furry friends, for they are the truest of companions.",
-        "datetime": "2021-10-10 10:10:10",
-        "like": 5,
-        "comment": 10,
-        "share": 15,
-        "isLike": true
-    },
-    {
-        "id": "3",
-        "name": "Farhana",
-        "point": 100,
-        "profileImg": "/images/1.jpg",
-        "img": "/images/yoga.jpg",
-        "title": "Embracing serenity, one breath at a time.",
-        "description": "In this serene snapshot, I find myself immersed in a moment of pure tranquility. The gentle glow of morning sunlight illuminates the room as I gracefully flow through a yoga sequence. The stillness of the moment allows me to reconnect with my body, mind, and soul, finding balance and inner peace amidst the chaos of life. With each breath, I release tension and embrace a sense of grounding. Join me on this journey of self-discovery and let's find our center together. ",
-        "datetime": "2021-10-10 10:10:10",
-        "like": 3,
-        "comment": 10,
-        "share": 15,
-        "isLike": true
-    }
+  {
+    "id": "1",
+    "name": "Elvis Lim Yi Han",
+    "point": 100,
+    "profileImg": "/images/3.jpg",
+    "img": "/images/cycling.PNG",
+    "title": "A Breathtaking Cycling Adventure",
+    "description": "Today, I embarked on an exhilarating cycling expedition that took me on a mesmerizing journey through nature's wonders. As the sun painted the sky with hues of gold, I hopped on my trusty bicycle, ready to embrace the beauty that awaited me.",
+    "datetime": "2021-10-10 10:10:10",
+    "like": 2,
+    "comment": 10,
+    "share": 15,
+    "isLike": true
+  },
+  {
+    "id": "2",
+    "name": "Low Wei King",
+    "point": 100,
+    "profileImg": "/images/4.jpg",
+    "img": "/images/dog.PNG",
+    "title": "Unleashing happiness with my furry companion!",
+    "description": "In this heartwarming snapshot, my loyal four-legged friend and I are basking in the glorious sunshine, embracing the simple joys of life. Our day has been filled with endless playfulness, wagging tails, and slobbery kisses. Together, we've explored nature's wonders, taking long walks in the park, chasing squirrels, and rolling in the grass without a care in the world. The bond we share is unbreakable, a friendship that fills my heart with love and laughter. From morning cuddles to evening adventures, every moment spent with my furry companion is a treasure I hold dear. Cherish the moments with your furry friends, for they are the truest of companions.",
+    "datetime": "2021-10-10 10:10:10",
+    "like": 5,
+    "comment": 10,
+    "share": 15,
+    "isLike": true
+  },
+  {
+    "id": "3",
+    "name": "Farhana",
+    "point": 100,
+    "profileImg": "/images/1.jpg",
+    "img": "/images/yoga.jpg",
+    "title": "Embracing serenity, one breath at a time.",
+    "description": "In this serene snapshot, I find myself immersed in a moment of pure tranquility. The gentle glow of morning sunlight illuminates the room as I gracefully flow through a yoga sequence. The stillness of the moment allows me to reconnect with my body, mind, and soul, finding balance and inner peace amidst the chaos of life. With each breath, I release tension and embrace a sense of grounding. Join me on this journey of self-discovery and let's find our center together. ",
+    "datetime": "2021-10-10 10:10:10",
+    "like": 3,
+    "comment": 10,
+    "share": 15,
+    "isLike": true
+  }
 ]
