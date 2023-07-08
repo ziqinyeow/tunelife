@@ -1,7 +1,7 @@
 "use client";
 import { StatsRingCard } from "@/components/statsRingCard";
 import StatsRingCardProps from "@/model/statsRingCardProps";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   SegmentedControl,
   Group,
@@ -19,7 +19,17 @@ import {
   IconCar,
   IconActivity,
 } from "@tabler/icons-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { useDisclosure } from "@mantine/hooks";
+import clsx from "clsx";
+import { mono } from "@/lib/fonts";
 
 function SegmentedToggle({
   tab,
@@ -29,9 +39,9 @@ function SegmentedToggle({
   setTab: (tab: string) => void;
 }) {
   return (
-    <Group position="center" my="xl">
+    <Group position="center" my="xl" className="w-full">
       <SegmentedControl
-        className="w-96"
+        className="w-full"
         value={tab}
         onChange={(value: "profile" | "my-tune") => setTab(value)}
         data={[
@@ -127,7 +137,7 @@ function Profile() {
             <img
               src="https://s3-ap-southeast-1.amazonaws.com/tuneprotect.com/tpr/static-tuneprotect/images/logo.png"
               alt="Article"
-              className="mb-4 rounded-lg w-10 h-10"
+              className="w-10 h-10 mb-4 rounded-lg"
             />
           </div>
         </div>
@@ -137,7 +147,7 @@ function Profile() {
           Remaining Coverage
         </h4>
         {stats.map((item, index) => (
-          <div className="mb-2">
+          <div key={index} className="mb-2">
             <StatsRingCard key={index} {...item} />
           </div>
         ))}
@@ -147,19 +157,24 @@ function Profile() {
 }
 
 function MyTune() {
-  const [opened, { open, close }] = useDisclosure(false);
-  const [clickedInsurance, setClickedInsurance] = useState<string>("");
+  const [hydrated, setHydrated] = useState(false);
 
-  const handleClick = () => {
-    setClickedInsurance("Health Screening");
-    open();
-  };
+  useEffect(() => {
+    setHydrated(true);
+  });
+  // const [opened, { open, close }] = useDisclosure(false);
+  // const [clickedInsurance, setClickedInsurance] = useState<string>("");
+
+  // const handleClick = () => {
+  //   setClickedInsurance("Health Screening");
+  //   open();
+  // };
 
   return (
     <>
-      <div className="m-4 mb-6 flex ">
+      <div className="flex m-4 mb-6">
         <img
-          className="w-20 h-20 rounded-full mr-6 object-cover"
+          className="object-cover w-20 h-20 mr-6 rounded-full"
           src="./images/1.jpg"
           alt="Rounded avatar"
         />
@@ -180,85 +195,110 @@ function MyTune() {
           My Tune Protection
         </h3>
         <div className="grid grid-cols-3 gap-3">
-          <div className="flex items-center flex-col">
-            <button
-              className="p-2 border rounded-2xl mb-2"
-              onClick={() => handleClick()}
-            >
-              <IconStethoscope className="w-10 h-10 text-red-500" />
-            </button>
-            <p className="ml-2 text-center">PRO-Health Medical</p>
-          </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2 bg-slate-200">
-              <IconLock className="w-10 h-10 text-gray-600" />
-            </button>
-            <p className="ml-2 text-center">Bike Easy</p>
-          </div>
-          {/* <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2 bg-slate-200">
+          {hydrated && (
+            <>
+              <Dialog>
+                <DialogTrigger>
+                  <div
+                    className={clsx(
+                      mono.className,
+                      "flex flex-col items-center"
+                    )}
+                  >
+                    <button className="p-2 mb-2 border rounded-2xl">
+                      <IconStethoscope className="w-10 h-10 text-red-500" />
+                    </button>
+                    <p className="ml-2 text-center">PRO-Health Medical</p>
+                  </div>
+                </DialogTrigger>
+                <DialogContent>
+                  <div className="flex w-full p-3 mb-2 border">
+                    <IconMotorbike className="w-10 h-10 m-3 text-red-500" />
+                    <div>
+                      <p>Home Easy</p>
+                      <p>10x Tune Coin earn rate</p>
+                    </div>
+                  </div>
+                  <p>
+                    When you have higher earn rate, you can earn more coins
+                    after completing a quest. If a quest rewards user with 1
+                    coin, you can earn 10 coins!
+                  </p>
+                </DialogContent>
+              </Dialog>
+
+              <div className="flex flex-col items-center">
+                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
+                  <IconLock className="w-10 h-10 text-gray-600" />
+                </button>
+                <p className="ml-2 text-center">Bike Easy</p>
+              </div>
+              {/* <div className="flex flex-col items-center">
+            <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
               <IconMotorbike className="w-10 h-10 text-gray-600" />
             </button>
             <p className="ml-2 text-center">Bike Easy</p>
           </div> */}
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2 bg-slate-200">
-              <IconLock className="w-10 h-10 text-gray-600" />
-            </button>
-            <p className="ml-2 text-center">Critical Safe+</p>
-          </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2 bg-slate-200">
-              <IconLock className="w-10 h-10 text-gray-600" />
-            </button>
-            <p className="ml-2 text-center">Home Easy</p>
-          </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2 bg-slate-200">
-              <IconLock className="w-10 h-10 text-gray-600" />
-            </button>
-            <p className="ml-2 text-center">COVID Travel Pass+</p>
-          </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2 bg-slate-200">
-              <IconLock className="w-10 h-10 text-gray-600" />
-            </button>
-            <p className="ml-2 text-center">Motor</p>
-          </div>
-          {/* <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2 bg-slate-200">
+              <div className="flex flex-col items-center">
+                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
+                  <IconLock className="w-10 h-10 text-gray-600" />
+                </button>
+                <p className="ml-2 text-center">Critical Safe+</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
+                  <IconLock className="w-10 h-10 text-gray-600" />
+                </button>
+                <p className="ml-2 text-center">Home Easy</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
+                  <IconLock className="w-10 h-10 text-gray-600" />
+                </button>
+                <p className="ml-2 text-center">COVID Travel Pass+</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
+                  <IconLock className="w-10 h-10 text-gray-600" />
+                </button>
+                <p className="ml-2 text-center">Motor</p>
+              </div>
+            </>
+          )}
+          {/* <div className="flex flex-col items-center">
+            <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
               <IconMotorbike className="w-10 h-10 text-gray-600" />
             </button>
             <p className="ml-2 text-center">Bike Easy</p>
           </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2">
+          <div className="flex flex-col items-center">
+            <button className="p-2 mb-2 border rounded-2xl">
               <IconActivity className="w-10 h-10 text-red-500" />
             </button>
             <p className="ml-2 text-center">Critical Safe+</p>
           </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2">
+          <div className="flex flex-col items-center">
+            <button className="p-2 mb-2 border rounded-2xl">
               <IconHomeHeart className="w-10 h-10 text-red-500" />
             </button>
             <p className="ml-2 text-center">Home Easy</p>
           </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2">
+          <div className="flex flex-col items-center">
+            <button className="p-2 mb-2 border rounded-2xl">
               <IconPlaneTilt className="w-10 h-10 text-red-500" />
             </button>
             <p className="ml-2 text-center">COVID Travel Pass+</p>
           </div>
-          <div className="flex items-center flex-col">
-            <button className="p-2 border rounded-2xl mb-2">
+          <div className="flex flex-col items-center">
+            <button className="p-2 mb-2 border rounded-2xl">
               <IconCar className="w-10 h-10 text-red-500" />
             </button>
             <p className="ml-2 text-center">Motor</p>
           </div> */}
         </div>
       </div>
-      <div className="flex w-96 p-3 border mb-2">
-        <IconMotorbike className="m-3 w-10 h-10 text-red-500" />
+      <div className="flex p-3 mb-2 border w-96">
+        <IconMotorbike className="w-10 h-10 m-3 text-red-500" />
         <div>
           <p>Home Easy</p>
           <p>10x Tune Coin earn rate</p>
@@ -272,15 +312,13 @@ function MyTune() {
   );
 }
 
-function page() {
+export default function Page() {
   const [tab, setTab] = useState("my-tune");
 
   return (
-    <div className="mb-32">
+    <div className="flex-col mb-32 layout">
       <SegmentedToggle tab={tab} setTab={setTab} />
       {tab === "profile" ? <Profile /> : <MyTune />}
     </div>
   );
 }
-
-export default page;
