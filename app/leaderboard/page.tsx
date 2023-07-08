@@ -57,7 +57,7 @@ function ListItem({
             className="object-cover !w-10 !h-10 mr-4 rounded-full"
             width={30}
             height={30}
-            src={`/images/${(index %4)+1}.jpg`}
+            src={`/images/${(index % 4) + 1}.jpg`}
             alt="Rounded avatar"
           />
           <span className="">{name}</span>
@@ -151,21 +151,21 @@ function page() {
         <div className="grid grid-cols-3 gap-4">
           <div className="flex flex-col items-center w-full h-36">
             <Watch />
-            <div className="flex flex-col items-center text-xs font-medium">
+            <div className="flex flex-col items-center text-xs font-medium text-center">
               <div className="text-base text-red-500">2nd</div>
               <div>Apple Watch Ultra</div>
             </div>
           </div>
           <div className="flex flex-col items-center w-full h-36">
             <Macbook />
-            <div className="flex flex-col items-center text-xs font-medium">
+            <div className="flex flex-col items-center text-xs font-medium text-center">
               <div className="text-base text-red-500">1st</div>
               <div>Macbook Pro 14&apos;</div>
             </div>
           </div>
           <div className="flex flex-col items-center w-full h-36">
             <Shoe />
-            <div className="flex flex-col items-center text-xs font-medium">
+            <div className="flex flex-col items-center text-xs font-medium text-center">
               <div className="text-base text-red-500">3rd</div>
               <div>Nike Air Jordan</div>
             </div>

@@ -6,7 +6,7 @@ import { Gift, MoveDownRight, MoveUpRight, Swords } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const tabs = ["All", "Health", "Workout", "Relax", "Eat"];
+const tabs = ["Recommended", "All", "Health", "Workout", "Relax", "Eat"];
 
 const rewards = [
   {
@@ -175,10 +175,53 @@ const rewards = [
     description: "Get 1x free healthy meal at any BMS Organics nearby",
     coins: 500,
   },
+  {
+    id: 21,
+    category: "Recommended",
+    img: "https://group.bphealthcare.com/wp-content/uploads/2022/09/cropped-logo-1.png",
+    title: "Free Health Screening",
+    description: "Get your free health screening now with BPLab",
+    coins: 100,
+  },
+  {
+    id: 22,
+    category: "Recommended",
+    img: "https://www.pathlab.com.my/sites/default/files/New-2019-Pathlab-Logo.jpg",
+    title: "Free Health Screening",
+    description: "Schedule your free health screening now with Pathlab",
+    coins: 200,
+  },
+  {
+    id: 23,
+    category: "Recommended",
+    img: "https://mmha.org.my/images/mmha-logo-text.png",
+    title: "Mental Health Consultation",
+    description:
+      "Access to professional therapists or counselors for confidential discussions and support",
+    coins: 150,
+  },
+  {
+    id: 24,
+    category: "Recommended",
+    img: "https://caring2u.com/wp-content/uploads/2019/03/Header-CARiNG-Logo-01.jpg",
+    title: "Supplements Discount",
+    description:
+      "Get up to 60% off for your favourite supplements at any Caring Pharmacy nearest to you",
+    coins: 200,
+  },
+  {
+    id: 25,
+    category: "Recommended",
+    img: "https://logos-download.com/wp-content/uploads/2017/01/Watsons_logo_logotype.png",
+    title: "Supplements Discount",
+    description:
+      "Get up to 50% off for your favourite supplements at any Watsons Pharmacy nearest to you",
+    coins: 300,
+  },
 ];
 
 export default function Page() {
-  const [tab, setTab] = useState(tabs[1]);
+  const [tab, setTab] = useState(tabs[0]);
 
   return (
     <main className={clsx(["pb-10 pt-5 layout", satoshi.className])}>
