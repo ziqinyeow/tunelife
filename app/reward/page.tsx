@@ -176,20 +176,22 @@ const rewards = [
     coins: 500,
   },
   {
-    id: 21,
-    category: "Recommended",
-    img: "https://group.bphealthcare.com/wp-content/uploads/2022/09/cropped-logo-1.png",
-    title: "Free Health Screening",
-    description: "Get your free health screening now with BPLab",
-    coins: 100,
-  },
-  {
     id: 22,
     category: "Recommended",
     img: "https://www.pathlab.com.my/sites/default/files/New-2019-Pathlab-Logo.jpg",
     title: "Free Health Screening",
     description: "Schedule your free health screening now with Pathlab",
     coins: 200,
+    match: 98,
+  },
+  {
+    id: 21,
+    category: "Recommended",
+    img: "https://group.bphealthcare.com/wp-content/uploads/2022/09/cropped-logo-1.png",
+    title: "Free Health Screening",
+    description: "Get your free health screening now with BPLab",
+    coins: 100,
+    match: 93,
   },
   {
     id: 23,
@@ -199,6 +201,7 @@ const rewards = [
     description:
       "Access to professional therapists or counselors for confidential discussions and support",
     coins: 150,
+    match: 91,
   },
   {
     id: 24,
@@ -208,6 +211,7 @@ const rewards = [
     description:
       "Get up to 60% off for your favourite supplements at any Caring Pharmacy nearest to you",
     coins: 200,
+    match: 89,
   },
   {
     id: 25,
@@ -217,6 +221,7 @@ const rewards = [
     description:
       "Get up to 50% off for your favourite supplements at any Watsons Pharmacy nearest to you",
     coins: 300,
+    match: 84,
   },
 ];
 
@@ -278,6 +283,11 @@ export default function Page() {
                   <h6 className="font-medium text-justify line-clamp-2">
                     {r?.description}
                   </h6>
+                  {r?.match && (
+                    <div className="mt-2 text-xs font-medium">
+                      Matching rate: {r?.match}%
+                    </div>
+                  )}
                   <div className="flex items-center gap-1 mt-1">
                     <p className="flex items-center gap-2 text-xs font-medium text-red-500">
                       <MoveDownRight className="w-3 h-3" /> {r?.coins}
