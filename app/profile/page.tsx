@@ -245,7 +245,10 @@ function Profile() {
               <Dialog>
                 <DialogTrigger>
                   <div className="flex flex-col items-center">
-                    <button className="p-2 mb-2 border rounded-2xl bg-slate-200">
+                    <button
+                      className="p-2 mb-2 border rounded-2xl bg-slate-200"
+                      onClick={() => handleClick("Bike Easy")}
+                    >
                       <IconLock className="w-10 h-10 text-gray-600" />
                     </button>
                     <p className="ml-2 text-center">Bike Easy</p>
