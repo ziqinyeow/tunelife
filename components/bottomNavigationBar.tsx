@@ -1,7 +1,8 @@
 "use client";
 import clsx from "clsx";
+import { User2 } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 function BottomNavigationBar() {
@@ -84,20 +85,7 @@ function BottomNavigationBar() {
                 data-tooltip-target="tooltip-new"
                 className="inline-flex items-center justify-center w-10 h-10 font-medium bg-[#ff0000] rounded-full hover:bg-[#ff3a3a] group focus:ring-4 focus:ring-red-300 focus:outline-none dark:focus:ring-red-800"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5 text-white lucide lucide-help-circle"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-                  <path d="M12 17h.01" />
-                </svg>
+                <User2 className="w-6 h-6 text-white"/>
                 <span className="sr-only">Tune</span>
               </Link>
             </div>
