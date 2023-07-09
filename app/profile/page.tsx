@@ -193,7 +193,7 @@ function Profile() {
         <h3 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 my-tune:text-white">
           My Tune Protection
         </h3>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-3 items-start">
           {hydrated && (
             <>
               <Dialog>
@@ -214,9 +214,9 @@ function Profile() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="flex w-full p-3 mb-2 border">
+                  <div className="flex w-full p-2 mb-2 border items-center justify-center">
                     <IconStethoscope className="w-10 h-10 m-3 text-red-500" />
-                    <p>{clickedInsurance}</p>
+                    <p className="text-xl">{clickedInsurance}</p>
                   </div>
                   <p className="font-bold">What Is This Product About?</p>
                   <p>
@@ -299,7 +299,7 @@ function Profile() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="flex w-full p-3 mb-2 border">
+                  <div className="flex w-full p-2 mb-2 border items-center">
                     <IconLock className="w-10 h-10 m-3 text-red-500" />
                     <div>
                       <p>{clickedInsurance}</p>
@@ -312,7 +312,7 @@ function Profile() {
                     coin, you can earn 10 coins!
                   </p>
                   <button className="w-auto border p-3 bg-[#ff0000] rounded-xl text-white">
-                    I want this!
+                    Unlock Now!
                   </button>
                 </DialogContent>
               </Dialog>
