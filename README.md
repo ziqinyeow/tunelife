@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TuneLife: Top 10 Solution in Tune Protect Hackathon
 
-## Getting Started
+## Team
 
-First, run the development server:
+Ng Yong Ming | Hoh Jia Da | Koay Hong Vin | Yeow Zi Qin
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Slides
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br/>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<div align="center">
+    <img src="./asset/1.png">
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<br/>
 
-## Learn More
+<div align="center">
+    <img src="./asset/2.png">
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+<br/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div align="center">
+    <img src="./asset/3.png">
+</div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br/>
 
-## Deploy on Vercel
+<div align="center">
+    <img src="./asset/4.png">
+</div>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br/>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div align="center">
+    <img src="./asset/5.png">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="./asset/6.png">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="./asset/7.png">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="./asset/8.png">
+</div>
+
+<!-- ## Aknowledgement -->
