@@ -2,7 +2,7 @@
 
 ## Team
 
-Ng Yong Ming | Hoh Jia Da | Koay Hong Vin | Yeow Zi Qin
+[Ng Yong Ming](https://www.linkedin.com/in/yong-ming-ng-8478a1193/) · [Hoh Jia Da](https://www.linkedin.com/in/hohjd/) · [Koay Hong Vin](https://www.linkedin.com/in/koayhv/) · [Yeow Zi Qin](https://www.linkedin.com/in/ziqinyeow/)
 
 ## Overview
 
